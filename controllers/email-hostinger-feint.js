@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 
 const mail = {
           
-    user: 'developer@feintdevs.com',
+    user: 'development@feintdevs.com',
     pass: '#bulFeintdevs1820'
 }
 
@@ -12,7 +12,7 @@ const mail = {
 const email  = async( req, res, next) => {  
    
     const { name, email, phone, message } = req.body;
-
+console.log(req.body)
   
 
     const contentHtml=`
@@ -46,9 +46,10 @@ async function sendMail(){
     
 
           const mailOptions = {
-            from: "Feint dEvs <developer@feintdevs.com>",
+            from: "Feint dEvs <development@feintdevs.com>",
             to: mail.user,
             subject: "Consulta-Contacto",
+            text:"Formulario de contacto FentdEvs",
             html: contentHtml,
         };
       
