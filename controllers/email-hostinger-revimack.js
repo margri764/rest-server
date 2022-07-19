@@ -2,14 +2,14 @@ const nodemailer = require('nodemailer');
 
 const mail = {
           
-    user: 'development@feintdevs.com',
-    pass: '#bulFeintdevs1820'
+    user: 'contacto@revimackagro.com',
+    pass: '#bulRevimack1820'
 }
 
 
 
 
-const emailFeint  = async( req, res, next) => {  
+const emailRevimack  = async( req, res, next) => {  
    
     const { name, email, phone, message } = req.body;
 console.log(req.body)
@@ -17,7 +17,7 @@ console.log(req.body)
 
     const contentHtml=`
     
-    <h1> Consulta Feint dEvs </h1>
+    <h1> Consulta Revimack Agro </h1>
     <ul>
         <li>name: ${name} </li>
         <li>email: ${email} </li>
@@ -46,7 +46,7 @@ async function sendMail(){
     
 
           const mailOptions = {
-            from: "Feint dEvs <development@feintdevs.com>",
+            from: "Revimack Agro <contacto@revimackagro.com>",
             to: mail.user,
             subject: "Consulta-Contacto",
             text:"Formulario de contacto FentdEvs",
@@ -78,6 +78,6 @@ sendMail()
 
   
   module.exports = {
-    emailFeint
+    emailRevimack
   }
 

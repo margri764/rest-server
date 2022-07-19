@@ -1,13 +1,16 @@
 const { Router } = require ('express');
 const router = Router();
 
-const { email } = require('../controllers/email-hostinger-feint');
+const { emailFeint } = require('../controllers/email-hostinger-feint');
+const { emailRevimack } = require('../controllers/email-hostinger-revimack');
 
 
 
 router.post('/feint',[
-],email); 
+],emailFeint); 
 
+router.post('/revimack',[
+],emailRevimack); 
 
 
 
