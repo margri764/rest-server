@@ -1,9 +1,11 @@
 const nodemailer = require('nodemailer');
 
 const mail = {
+
+  user: process.env.USER_REVIMACK,
+  pass: process.env.PASSWORD_REVIMACK
           
-    user: 'contacto@revimackagro.com',
-    pass: '#bulRevimack1820'
+   
 }
 
 
