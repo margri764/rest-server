@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 const mail = {
           
     user: 'development@feintdevs.com',
-    pass: '#bulFeintdevs1820'
+    pass: 'bulFeintdevs#1820'
 }
 
 
