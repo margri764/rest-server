@@ -18,11 +18,7 @@ class Server{
         this.app.use(cors());
         this.app.use (express.json());
         this.app.use(express.static('public'));
-        
         this.app.set('trust proxy', true);
-     
-      
-
     }    
 
     routes(){
@@ -33,15 +29,12 @@ class Server{
             res.sendFile( path.resolve( __dirname,'../public/index.html') )
             });
               
-              
     }
 
     listen(){
         this.app.listen(this.port)
         console.log('servidor corriendo en puerto', this.port)
     }
-
-
 
 }
 

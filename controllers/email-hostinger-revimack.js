@@ -1,15 +1,9 @@
 const nodemailer = require('nodemailer');
 
 const mail = {
-
   user: process.env.USER_REVIMACK,
   pass: process.env.PASSWORD_REVIMACK
-          
-   
 }
-
-
-
 
 const emailRevimack  = async( req, res, next) => {  
    
@@ -45,18 +39,14 @@ async function sendMail(){
               pass: mail.pass, // generated ethereal password
             },
           });
-    
 
           const mailOptions = {
             from: "Revimack Agro <contacto@revimackagro.com>",
             to: mail.user,
             subject: "Consulta-Contacto",
-            text:"Formulario de contacto FentdEvs",
+            text:"Formulario de contacto Revimack",
             html: contentHtml,
         };
-      
-
-     
         
         const result = await transporter.sendMail(mailOptions);     
         res.status(200).json("true")
@@ -73,13 +63,9 @@ sendMail()
 .then (result => res.status(200))
 .catch(error =>  next(error))
 
-
-
 }
-
-
   
-  module.exports = {
-    emailRevimack
-  }
+  module.exports =  { 
+                     emailRevimack
+                    }
 
